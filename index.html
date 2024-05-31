@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<script src="https://cdn.jsdelivr.net/gh/Sneed-Group/js-plus-plus@4aa90e68db61d04b982eeb4a9ec8c3aac4349245/jspp.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/Sneed-Group/js-plus-plus@19d54b7e202dc7ba84d9cd3a45af70b62c74c055/jspp.js"></script>
 <script>
 const helpers = new JSPlusPlus.General.Helpers
 const html = new JSPlusPlus.HTMLFrontend
@@ -9,7 +9,7 @@ function tox() {
 const sentence = document.getElementById("textBox1").value
 let p = document.getElementById("toxicityBool")
 const objSentence = [sentence]
-let toxic = helpers.isToxic(objSentence)
+let toxic = await helpers.isToxic(objSentence)
 p.innerText = toxic
 console.log(toxic)
 }
