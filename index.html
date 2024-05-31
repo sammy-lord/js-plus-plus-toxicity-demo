@@ -5,7 +5,9 @@ const helpers = new JSPlusPlus.General.Helpers
 const html = new JSPlusPlus.HTMLFrontend
 html.initHead("Toxicity Check")
 html.initBody()
-function tox(sentence, p) {
+function tox() {
+const sentence = document.getElementById("textBox1").value
+let p = document.getElementById("toxicityBool")
 const objSentence = [sentence]
 let toxic = helpers.isToxic(objSentence)
 p.innerText = toxic
@@ -20,5 +22,5 @@ let submit = html.createElement("button", "submit")
 
 submit.innerText = "Toxic?" // github pages pls dont bug out now
 
-submit.addEventListener("click", tox(document.getElementById("textBox1").value, document.getElementById("toxicityBool")));
+submit.addEventListener("click", tox);
 </script>
