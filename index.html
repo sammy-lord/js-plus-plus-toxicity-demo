@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<script src="https://cdn.jsdelivr.net/gh/Sneed-Group/js-plus-plus@3dffa7e4121cbe8317232b7dab5b847374f62c78/jspp.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/Sneed-Group/js-plus-plus@24acc782d30c974f94e36da932c7bb49ed212143/jspp.js"></script>
 <script>
 const helpers = new JSPlusPlus.General.Helpers
 const html = new JSPlusPlus.HTMLFrontend
@@ -20,5 +20,5 @@ let submit = html.createElement("button", "submit")
 
 submit.innerText = "Toxic?" // github pages pls dont bug out now
 
-submit.addEventListener("click", tox(textbox.value, p));
+submit.addEventListener("click", tox(document.getElementById("textBox1").value, document.getElementById("toxicityBool")));
 </script>
