@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<script>
+const helpers = new JSPlusPlus.Generic.Helpers
+const html = new JSPlusPlus.HTMLFrontend
+html.initHead("Toxicity Check")
+html.initBody()
+createElement
+function tox(sentence) {
+const objSentence = [sentence]
+console.log(helpers.isToxic(objSentence))
+}
+
+helpers.consoleUseWarner("DO NOT INPUT ANYTHING HERE UNLESS YOU KNOW WHAT YOU ARE DOING.")
+
+createParagraph("toxicityBool", "Input text to the text box bellow, click the button, and check here if its toxic.")
+html.createElement("textarea", "textBox1", {width: "80%", placeholder: "input sentence here."}
+let submit = html.createElement("button", "submit")
+
+submit.onclick(tox(textBox1.value))
+</script>
