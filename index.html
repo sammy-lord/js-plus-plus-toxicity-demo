@@ -10,7 +10,7 @@ const sentence = document.getElementById("textBox1").value
 let p = document.getElementById("toxicityBool")
 const objSentence = [sentence]
 let toxic = await helpers.isToxic(objSentence)
-p.innerText = JSON.stringify(toxic.toString)
+p.innerText = JSON.stringify(toxic)
 console.log(toxic)
 }
 
