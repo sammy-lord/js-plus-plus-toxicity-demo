@@ -5,18 +5,20 @@ const helpers = new JSPlusPlus.General.Helpers
 const html = new JSPlusPlus.HTMLFrontend
 html.initHead("Toxicity Check")
 html.initBody()
-function tox(sentence) {
+function tox(sentence, p) {
 const objSentence = [sentence]
-console.log(helpers.isToxic(objSentence))
+let toxic = helpers.isToxic(objSentence)
+p.innerText = toxic
+console.log(toxic)
 }
 
 helpers.consoleUseWarner("DO NOT INPUT ANYTHING HERE UNLESS YOU KNOW WHAT YOU ARE DOING.")
 
-html.createParagraph("toxicityBool", "Input text to the text box bellow, click the button, and check here if its toxic.")
-html.createElement("textarea", "textBox1", {width: "80%", placeholder: "input sentence here."})
+let p = html.createParagraph("toxicityBool", "Input text to the text box bellow, click the button, and check here if its toxic.")
+let textbox = html.createElement("textarea", "textBox1", {width: "80%", placeholder: "input sentence here."})
 let submit = html.createElement("button", "submit")
 
 submit.innerText = "Toxic?" // github pages pls dont bug out now
 
-submit.addEventListener("click", tox(textBox1.value))
+submit.addEventListener("click", tox(textbox.value, p);)
 </script>
