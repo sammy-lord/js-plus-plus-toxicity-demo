@@ -5,7 +5,7 @@ const helpers = new JSPlusPlus.General.Helpers
 const html = new JSPlusPlus.HTMLFrontend
 html.initHead("Toxicity Check")
 html.initBody()
-function tox() {
+async function tox() {
 const sentence = document.getElementById("textBox1").value
 let p = document.getElementById("toxicityBool")
 const objSentence = [sentence]
